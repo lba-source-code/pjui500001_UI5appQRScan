@@ -8,7 +8,9 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
-					<content />
+					<content>
+						<Button text="Scan QR code!" press="onPress"/>
+					</content>
 				</Page>
 			</pages>
 		</App>
