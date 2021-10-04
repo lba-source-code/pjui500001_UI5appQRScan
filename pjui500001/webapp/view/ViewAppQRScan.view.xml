@@ -49,12 +49,12 @@
 										<VBox class="demoBox">
 											<Title text="Receipt" wrapping="true" />
 											<Text text="Finished Good" wrapping="true" />
-											<Button text="Scan QR code!" app:customattribute='{"plant":2000, "movtype":"Receipt"}'  press="onPress"/>
+											<Button text="Scan QR code!" app:customattribute='{"plant":2000, "movtype":"Receipt"}' press="onPress"/>
 										</VBox>
 										<VBox class="demoBox">
 											<Title text="Dispatch" wrapping="true" />
 											<Text text="Finished Good" wrapping="true" />
-											<Button text="Scan QR code!" app:customattribute='{"plant":2000, "movtype":"Dispatch"}'  press="onPress"/>
+											<Button text="Scan QR code!" app:customattribute='{"plant":2000, "movtype":"Dispatch"}' press="onPress"/>
 										</VBox>
 
 										<VBox class="demoBox">
@@ -64,16 +64,16 @@
 										<VBox class="demoBox">
 											<Title text="Receipt" wrapping="true" />
 											<Text text="Finished Good" wrapping="true" />
-											<Button text="Scan QR code!" app:customattribute='{"plant":3000, "movtype":"Receipt"}'  press="onPress"/>
+											<Button text="Scan QR code!" app:customattribute='{"plant":3000, "movtype":"Receipt"}' press="onPress"/>
 										</VBox>
 										<VBox class="demoBox">
 											<Title text="Dispatch" wrapping="true" />
 											<Text text="Finished Good" wrapping="true" />
-											<Button text="Scan QR code!" app:customattribute='{"plant":3000, "movtype":"Dispatch"}'  press="onPress"/>
+											<Button text="Scan QR code!" app:customattribute='{"plant":3000, "movtype":"Dispatch"}' press="onPress"/>
 										</VBox>										
 
 							</grid:CSSGrid>							
-						</Panel>	
+						</Panel>			
 
 					</content>
 
