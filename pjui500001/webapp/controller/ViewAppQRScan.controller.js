@@ -29,10 +29,15 @@ sap.ui.define([
 					closeOnBrowserNavigation: true   // default
 				});
 			},
-			onPress: function () {
+			onPress: function (oEvent) {
 				//lbaIO comment
-				console.log('lbaIO log: onPress');
-
+				console.log('lbaIO log: onPress ');
+				console.log('lbaIO log: onPress ' + Object.values(oEvent));
+				console.log('lbaIO log: onPress ' + Object.values(Object.values(oEvent)[2]));
+				console.log('lbaIO log: onPress ' + oEvent.getSource());
+				console.log('lbaIO log: onPress ' + oEvent.getSource().data("customattribute"));
+				var vr_obj = oEvent.getSource().data("customattribute");
+				console.log(Object.values(vr_obj));
 				sap.ndc.BarcodeScanner.scan(
 					function (mResult) {
 					   /*alert("We got a bar code\n" +
@@ -40,7 +45,7 @@ sap.ui.define([
 							 "Format: " + mResult.format + "\n" +
 							 "Cancelled: " + mResult.cancelled);*/
 
-							 sap.m.MessageToast.show("lbaIO - QR Code:\n" + mResult.text, {
+							 sap.m.MessageToast.show("lbaIO - QR Code:\n Plant: " + Object.values(vr_obj)[0] + "\n Mov. Type: " + Object.values(vr_obj)[1] + "\n" + mResult.text, {
 								duration: 6000,                  // default
 								width: "15em",                   // default
 								my: "center",       		     // default
@@ -57,6 +62,7 @@ sap.ui.define([
 							
 
 					},
+					
 					function (Error) {
 					   alert("Scanning failed: " + Error);
 					},
@@ -65,6 +71,11 @@ sap.ui.define([
 					},
 					"Enter Product Bar Code"
 				);
+
+				
+				
+				
+
 			}
 		});
 	});
