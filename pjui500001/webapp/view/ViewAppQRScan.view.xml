@@ -9,6 +9,7 @@
 	xmlns:w="sap.ui.integration.widgets"
     displayBlock="true"
     xmlns="sap.m"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
 >
 	<Shell id="shell">
 		<App id="app">
@@ -26,47 +27,49 @@
 
 										<VBox class="demoBox">
 											<Title text="Plant 1000" wrapping="true" />
-											<Text text="Raw Materials" wrapping="true" />
+											<Text text="..." wrapping="true" />
 										</VBox>
 										<VBox class="demoBox">
 											<Title text="Receipt" wrapping="true" />
 											<Text text="Raw Materials" wrapping="true" />
-											<Button text="Scan QR code!" press="onPress"/>
+											<Button text="Scan QR code!" app:customattribute='{"plant":1000, "movtype":"Receipt"}'  press="onPress"/>
+		
+		
 										</VBox>
 										<VBox class="demoBox">
 											<Title text="Dispatch" wrapping="true" />
-											<Text text="Raw Materials" wrapping="true" />
-											<Button text="Scan QR code!" press="onPress"/>
+											<Text text="Semi-finished goods" wrapping="true" />
+											<Button text="Scan QR code!" app:customattribute='{"plant":1000, "movtype":"Dispatch"}'  press="onPress"/>
 										</VBox>
 
 										<VBox class="demoBox">
 											<Title text="Plant 2000" wrapping="true" />
-											<Text text="Finished Good" wrapping="true" />
+											<Text text="..." wrapping="true" />
 										</VBox>
 										<VBox class="demoBox">
 											<Title text="Receipt" wrapping="true" />
 											<Text text="Finished Good" wrapping="true" />
-											<Button text="Scan QR code!" press="onPress"/>
+											<Button text="Scan QR code!" app:customattribute='{"plant":2000, "movtype":"Receipt"}'  press="onPress"/>
 										</VBox>
 										<VBox class="demoBox">
 											<Title text="Dispatch" wrapping="true" />
 											<Text text="Finished Good" wrapping="true" />
-											<Button text="Scan QR code!" press="onPress"/>
+											<Button text="Scan QR code!" app:customattribute='{"plant":2000, "movtype":"Dispatch"}'  press="onPress"/>
 										</VBox>
 
 										<VBox class="demoBox">
-											<Title text="WareHouse 1000" wrapping="true" />
-											<Text text="Finished Good" wrapping="true" />
+											<Title text="Plant 3000" wrapping="true" />
+											<Text text="..." wrapping="true" />
 										</VBox>
 										<VBox class="demoBox">
 											<Title text="Receipt" wrapping="true" />
 											<Text text="Finished Good" wrapping="true" />
-											<Button text="Scan QR code!" press="onPress"/>
+											<Button text="Scan QR code!" app:customattribute='{"plant":3000, "movtype":"Receipt"}'  press="onPress"/>
 										</VBox>
 										<VBox class="demoBox">
 											<Title text="Dispatch" wrapping="true" />
 											<Text text="Finished Good" wrapping="true" />
-											<Button text="Scan QR code!" press="onPress"/>
+											<Button text="Scan QR code!" app:customattribute='{"plant":3000, "movtype":"Dispatch"}'  press="onPress"/>
 										</VBox>										
 
 							</grid:CSSGrid>							

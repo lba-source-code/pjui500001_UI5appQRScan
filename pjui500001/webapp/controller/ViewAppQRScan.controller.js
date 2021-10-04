@@ -29,10 +29,15 @@ sap.ui.define([
 					closeOnBrowserNavigation: true   // default
 				});
 			},
-			onPress: function () {
+			onPress: function (oEvent) {
 				//lbaIO comment
-				console.log('lbaIO log: onPress');
-
+				console.log('lbaIO log: onPress ');
+				console.log('lbaIO log: onPress ' + Object.values(oEvent));
+				console.log('lbaIO log: onPress ' + Object.values(Object.values(oEvent)[2]));
+				console.log('lbaIO log: onPress ' + oEvent.getSource());
+				console.log('lbaIO log: onPress ' + oEvent.getSource().data("customattribute"));
+				var vr_obj = oEvent.getSource().data("customattribute");
+				console.log(Object.values(vr_obj));
 				sap.ndc.BarcodeScanner.scan(
 					function (mResult) {
 					   /*alert("We got a bar code\n" +
