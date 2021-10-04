@@ -1,6 +1,12 @@
 <mvc:View
     controllerName="pjui500001.controller.ViewAppQRScan"
     xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.f"
+	xmlns:card="sap.f.cards"
+	xmlns:grid="sap.ui.layout.cssgrid"
+	xmlns:w="sap.ui.integration.widgets"
     displayBlock="true"
     xmlns="sap.m"
 >
@@ -8,9 +14,77 @@
 		<App id="app">
 			<pages>
 				<Page id="page" title="{i18n>title}">
+
 					<content>
-						<Button text="Scan QR code!" press="onPress"/>
+
+						<Panel>
+							<grid:CSSGrid
+										id="grid1"
+										gridTemplateRows="auto"
+										gridTemplateColumns="1fr 1fr 1fr"
+										gridGap="1rem">
+
+										<VBox class="demoBox">
+											<Title text="Plant 1000" wrapping="true" />
+											<Text text="Raw Materials" wrapping="true" />
+										</VBox>
+										<VBox class="demoBox">
+											<Title text="Receipt" wrapping="true" />
+											<Text text="Raw Materials" wrapping="true" />
+											<Button text="Scan QR code!" press="onPress"/>
+										</VBox>
+										<VBox class="demoBox">
+											<Title text="Dispatch" wrapping="true" />
+											<Text text="Raw Materials" wrapping="true" />
+											<Button text="Scan QR code!" press="onPress"/>
+										</VBox>
+
+										<VBox class="demoBox">
+											<Title text="Plant 2000" wrapping="true" />
+											<Text text="Finished Good" wrapping="true" />
+										</VBox>
+										<VBox class="demoBox">
+											<Title text="Receipt" wrapping="true" />
+											<Text text="Finished Good" wrapping="true" />
+											<Button text="Scan QR code!" press="onPress"/>
+										</VBox>
+										<VBox class="demoBox">
+											<Title text="Dispatch" wrapping="true" />
+											<Text text="Finished Good" wrapping="true" />
+											<Button text="Scan QR code!" press="onPress"/>
+										</VBox>
+
+										<VBox class="demoBox">
+											<Title text="WareHouse 1000" wrapping="true" />
+											<Text text="Finished Good" wrapping="true" />
+										</VBox>
+										<VBox class="demoBox">
+											<Title text="Receipt" wrapping="true" />
+											<Text text="Finished Good" wrapping="true" />
+											<Button text="Scan QR code!" press="onPress"/>
+										</VBox>
+										<VBox class="demoBox">
+											<Title text="Dispatch" wrapping="true" />
+											<Text text="Finished Good" wrapping="true" />
+											<Button text="Scan QR code!" press="onPress"/>
+										</VBox>										
+
+							</grid:CSSGrid>							
+						</Panel>	
+
 					</content>
+
+					<footer>
+						<Toolbar>
+							<VBox class="sapUiSmallMargin">
+								<Text text="Power by: lbaIO-coding |" />
+								<Link
+									text="YouTube channel"
+									target="_blank"
+									href="https://www.youtube.com/channel/UC7ISms30fd72wYs9N4OcSCg"/>
+							</VBox>
+						</Toolbar>
+					</footer>
 				</Page>
 			</pages>
 		</App>

@@ -53,7 +53,8 @@ sap.ui.define([
 								animationTimingFunction: "ease", // default
 								animationDuration: 1000,         // default
 								closeOnBrowserNavigation: true   // default
-							});							 
+							});
+							
 
 					},
 					function (Error) {
